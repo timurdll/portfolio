@@ -1,0 +1,211 @@
+.header {
+  width: 100vw;
+  z-index: 1;
+  background-color: var(--graywhite);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
+  border-right: 1px solid #fff;
+}
+
+.header__row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 20px 0;
+}
+
+a {
+  text-decoration: none; /* Remove underlines from links */
+  color: inherit; /* Inherit text color from parent element */
+  cursor: pointer; /* Change cursor to a pointer when hovering over links */
+}
+
+.header__logo-letter {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 0px 13px;
+  position: relative;
+  background-color: var(--primary-500);
+  border-radius: 1000px;
+  overflow: hidden;
+}
+
+.header__logo-letter .header__logo-letter-wrapper {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Poppins-Medium", Helvetica;
+  font-weight: 500;
+  color: var(--graywhite);
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: 56px;
+  white-space: nowrap;
+}
+
+.header__logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 12px;
+}
+
+.header__logo-text {
+  font-family: var(--heading-03-font-family);
+  font-weight: var(--heading-03-font-weight);
+  color: var(--gray-900);
+  font-size: var(--heading-03-font-size);
+  letter-spacing: var(--heading-03-letter-spacing);
+  line-height: var(--heading-03-line-height);
+  white-space: nowrap;
+  font-style: var(--heading-03-font-style);
+}
+
+/* .header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.header__nav-links {
+  display: flex;
+  flex-direction: row;
+  column-gap: 48px;
+  align-items: center;
+}
+
+.header__nav-link:hover {
+  color: var(--primary-500);
+}
+
+.header__nav-link {
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.header__nav-button {
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 4px;
+  background: var(--primary-500);
+  color: #fff;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+/* Add these styles to your CSS file */
+
+.header__burger {
+  display: none; /* Hide the button by default on larger screens */
+}
+
+.burger-icon {
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.open .burger-icon {
+  background-color: #fff; /* Change the color of the burger icon when the menu is open */
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.mobile__nav {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  z-index: 300;
+}
+
+.open-menu {
+  left: 0 !important;
+}
+
+.closed-menu {
+  left: -100% !important;
+}
+
+.mobile__nav-close {
+  cursor: pointer;
+  font-size: 3.3rem;
+  position: absolute;
+  right: 2rem;
+  top: 1.5rem;
+}
+
+.mobile__nav-links {
+  display: flex;
+  flex-direction: column;
+  font-size: 2.3rem;
+  gap: 3.5rem;
+  list-style: none;
+}
+
+.mobile__nav li {
+  font-family: Work Sans;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+}
+
+/* Define media query for mobile screens */
+@media (max-width: 768px) {
+  .header__burger {
+    display: block; /* Show the button on smaller screens */
+  }
+
+  .header__nav {
+    display: none; /* Hide the navigation menu by default on smaller screens */
+  }
+
+  .open .header__nav {
+    display: block; /* Show the navigation menu when the burger menu is open */
+  }
+}
+
+@media (max-width: 580px) {
+  .header__logo-text {
+    font-size: 24px;
+  }
+}
