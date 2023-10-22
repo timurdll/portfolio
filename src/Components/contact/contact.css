@@ -21,6 +21,7 @@
 .contact__info-text {
   display: flex;
   max-width: 440px;
+  width: 100%;
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
@@ -55,7 +56,7 @@
 
 .contact__info-address {
   display: flex;
-  width: 336px;
+  max-width: 336px;
   padding: 24px;
   align-items: center;
   gap: 13px;
@@ -210,6 +211,19 @@ input {
   }
   .contact__info-description {
     font-size: 14px;
+  }
+
+  .contact__info {
+    display: flex;
+    max-width: 440px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+  .contact__info-text {
+    width: fit-content;
   }
 }
 
