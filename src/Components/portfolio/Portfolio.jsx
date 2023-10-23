@@ -10,8 +10,7 @@ const Portfolio = () => {
           <div className="portfolio__header">
             <span className="portfolio__header-text">Portfolio</span>
             <span className="portfolio__header-subtext">
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration.
+              Every project is unique piece of development created with love💖
             </span>
           </div>
           <div className="portfolio__content">

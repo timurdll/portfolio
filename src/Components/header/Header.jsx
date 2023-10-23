@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./header.css";
 import menu from "../../assets/menu.svg";
 import close from "../../assets/close.svg";
-import CustomButton from "../button/CustomButton";
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);

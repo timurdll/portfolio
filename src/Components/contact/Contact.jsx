@@ -5,7 +5,6 @@ import location from "../../assets/location.svg";
 import github from "../../assets/github-mark.svg";
 import telegram from "../../assets/telegram.svg";
 import emailjs from "@emailjs/browser";
-import { CSSTransition } from "react-transition-group";
 import { Alert } from "@mui/material";
 
 const Contact = () => {
