@@ -1,22 +1,21 @@
+import { useTranslation } from "react-i18next";
 import CustomButton from "../button/CustomButton";
 import "./advertisement.css";
 
 const Advertisement = () => {
+  const { t } = useTranslation();
   return (
     <section className="advertisement" id="advertisement">
       <div className="container">
         <div className="advertisement__content">
           <span className="advertisement__content-header">
-            Is your company looking for a frontend developer to join its ranks?
-            Look no further!
+            {t("advertisement")}
           </span>
           <span className="advertisement__content-text">
-            Im that diligent, professional and friendly worker you need! With a
-            strong track record in creating innovative and user-friendly web
-            applications, I'm ready to bring my expertise to your company.
+            {t("advertisement_sub")}
           </span>
           <div className="advertisement__skills">
-            <span className="advertisement__skills-span">My Skills</span>
+            <span className="advertisement__skills-span">{t("skills")}</span>
             <div className="advertisement__skills-logos">
               <img
                 src="https://skillicons.dev/icons?i=html,css"
@@ -34,7 +33,7 @@ const Advertisement = () => {
             </div>
           </div>
           <CustomButton
-            text="Download my CV"
+            text={t("download")}
             iconType="download"
             variant="original"
           />

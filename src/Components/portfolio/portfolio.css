@@ -23,7 +23,7 @@
 .portfolio__header-text {
   color: var(--gray-900, #132238);
   /* Heading/01 */
-  font-family: Work Sans;
+  /* font-family: Work Sans; */
   font-size: 48px;
   font-style: normal;
   font-weight: 600;
@@ -34,7 +34,7 @@
   color: var(--gray-400, #87909d);
   text-align: center;
   /* Body/Large/400 */
-  font-family: Work Sans;
+  /* font-family: Work Sans; */
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -64,6 +64,7 @@
   background: var(--gray-white, #fff);
   box-shadow: 0px 12px 64px 0px rgba(28, 25, 25, 0.12);
   padding-bottom: 32px;
+  /* height: 421px; */
   /* height: 300px; */
 }
 
@@ -103,7 +104,7 @@
 .description-1 {
   color: var(--gray-400, #87909d);
   /* Body/Thin/500 */
-  font-family: Work Sans;
+  /* font-family: Work Sans; */
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
@@ -113,7 +114,7 @@
 .description-2 {
   color: var(--gray-900, #132238);
   /* Body/Large/600 */
-  font-family: Work Sans;
+  /* font-family: Work Sans; */
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
@@ -123,7 +124,7 @@
 .description-3 {
   color: var(--gray-600, #556070);
   /* Body/Small/400 */
-  font-family: Work Sans;
+  /* font-family: Work Sans; */
   font-size: 14px;
   font-style: normal;
   font-weight: 400;

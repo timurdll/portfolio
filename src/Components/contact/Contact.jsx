@@ -6,6 +6,7 @@ import github from "../../assets/github-mark.svg";
 import telegram from "../../assets/telegram.svg";
 import emailjs from "@emailjs/browser";
 import { Alert } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -13,6 +14,7 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [alertMessage, setAlertMessage] = useState("");
   const [showAlert, setShowAlert] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (alertMessage) {
@@ -73,18 +75,16 @@ const Contact = () => {
         <div className="contact__row">
           <div className="contact__info">
             <div className="contact__info-text">
-              <span className="contact__info-header">
-                Let’s discuss your offer
-              </span>
+              <span className="contact__info-header">{t("contact")}</span>
               <span className="contact__info-description">
-                Don't be shy and contact me, i'll answer as soon as i can🌻
+                {t("contact_sub")}
               </span>
             </div>
             <div className="contact__info-details">
               <div className="contact__info-address">
                 <img className="icon__location" src={location} alt="location" />
                 <div className="contact__info-data">
-                  <span className="contact__info-type">My Email:</span>
+                  <span className="contact__info-type">{t("email")}</span>
                   <span className="contact__info-connect">
                     timurrdll@gmail.com
                   </span>
@@ -93,7 +93,7 @@ const Contact = () => {
               <div className="contact__info-address">
                 <img className="icon__location" src={location} alt="location" />
                 <div className="contact__info-data">
-                  <span className="contact__info-type">My phone number:</span>
+                  <span className="contact__info-type">{t("number")}</span>
                   <span className="contact__info-connect">8-777-111-72-76</span>
                 </div>
               </div>
@@ -118,7 +118,7 @@ const Contact = () => {
           <form className="contact__form" onSubmit={handleSubmit}>
             <input
               className="contact__form-input"
-              placeholder="Name*"
+              placeholder={t("name")}
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
@@ -135,7 +135,7 @@ const Contact = () => {
             />
             <input
               className="contact__form-input"
-              placeholder="Message*"
+              placeholder={t("message")}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               required
@@ -143,7 +143,7 @@ const Contact = () => {
             />
             <CustomButton
               iconType="plane"
-              text="Submit"
+              text={t("submit")}
               type="submit"
               variant="original"
             />

@@ -27,7 +27,7 @@
   position: relative;
   width: fit-content;
   margin-top: -1px;
-  font-family: "Poppins-Medium", Helvetica;
+  /* font-family: "Poppins-Medium", Helvetica; */
   font-weight: 500;
   color: var(--graywhite);
   font-size: 24px;
@@ -47,7 +47,7 @@
 .footer__logo-text {
   color: var(--gray-white, #fff);
   /* Heading/03 */
-  font-family: Work Sans;
+  /* font-family: Work Sans; */
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
@@ -59,7 +59,7 @@
   align-items: flex-start;
   color: var(--gray-50, #f0f1f3);
   /* Body/Regular/400 */
-  font-family: Work Sans;
+  /* font-family: Work Sans; */
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -77,7 +77,7 @@
 .footer__copyright {
   color: var(--gray-white, #fff);
   /* Body/Regular/400 */
-  font-family: Work Sans;
+  /* font-family: Work Sans; */
   font-size: 16px;
   font-style: normal;
   font-weight: 400;

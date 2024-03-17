@@ -59,7 +59,7 @@ a {
 }
 
 .header__logo-text {
-  font-family: var(--heading-03-font-family);
+  /* font-family: var(--heading-03-font-family); */
   font-weight: var(--heading-03-font-weight);
   color: var(--gray-900);
   font-size: var(--heading-03-font-size);
@@ -87,12 +87,24 @@ a {
 }
 
 .header__nav-link {
-  font-family: Work Sans;
+  /* font-family: Work Sans; */
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
+}
+
+.header__nav-selector {
+  /* font-family: Work Sans; */
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+}
+
+.header__nav-selector-icon {
+  margin-top: 5px;
 }
 .header__nav-button {
   display: flex;
@@ -103,7 +115,7 @@ a {
   border-radius: 4px;
   background: var(--primary-500);
   color: #fff;
-  font-family: Work Sans;
+  /* font-family: Work Sans; */
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -173,6 +185,18 @@ a {
   top: 1.5rem;
 }
 
+.mobile__nav-selector {
+  /* font-family: Work Sans; */
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+}
+
+.header__nav-selector-icon {
+  margin-top: 5px;
+}
+
 .mobile__nav-links {
   display: flex;
   flex-direction: column;
@@ -182,7 +206,7 @@ a {
 }
 
 .mobile__nav li {
-  font-family: Work Sans;
+  /* font-family: Work Sans; */
   font-size: 24px;
   font-weight: 500;
   line-height: 24px;
@@ -190,7 +214,7 @@ a {
 }
 
 /* Define media query for mobile screens */
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .header__burger {
     display: block; /* Show the button on smaller screens */
   }

@@ -1,7 +1,9 @@
 import React from "react";
 import "./footer.css";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   const handleNavClick = (e, targetId) => {
     e.preventDefault();
     const targetElement = document.getElementById(targetId);
@@ -21,25 +23,25 @@ const Footer = () => {
           </div>
           <ul className="footer__links">
             <a href="#about" onClick={(e) => handleNavClick(e, "about")}>
-              <li className="footer__link">Home</li>
+              <li className="footer__link">{t("home")}</li>
             </a>
             <a
               href="#advertisement"
               onClick={(e) => handleNavClick(e, "advertisement")}
             >
-              <li className="footer__link">About</li>
+              <li className="footer__link">{t("about")}</li>
             </a>
             <a
               href="#portfolio"
               onClick={(e) => handleNavClick(e, "portfolio")}
             >
-              <li className="footer__link">Portfolio</li>
+              <li className="footer__link">{t("portfolio")}</li>
             </a>
             <a href="#contact" onClick={(e) => handleNavClick(e, "contact")}>
-              <li className="footer__link">Contact</li>
+              <li className="footer__link">{t("contacts")}</li>
             </a>
           </ul>
-          <span className="footer__copyright">Copyright © 2023 Timurdll.</span>
+          <span className="footer__copyright">Copyright © 2024 Timurdll.</span>
         </div>
       </div>
     </footer>

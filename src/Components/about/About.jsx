@@ -1,8 +1,10 @@
 import React from "react";
 import "./about.css";
 import CustomButton from "../button/CustomButton";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation();
   const handleClick = (e, targetId) => {
     e.preventDefault();
     const targetElement = document.getElementById(targetId);
@@ -20,37 +22,35 @@ const About = () => {
           <div className="about__content">
             <div className="about__content-text">
               <span className="hello">
-                Hello, I’m
+                {t("hello")}
                 <br />
-                Timur👋
+                {t("Timur")}
               </span>
               <span className="info">
-                I'm a educated Front-end Developer based in Astana, Kazakhstan🌏
-                <br />I strives to build immersive and beautiful web
-                applications through carefully crafted code and user-centric
-                design.
+                {t("about_me-1")}
+                <br /> {t("about_me-2")}
               </span>
               <a
                 href="#advertisement"
                 onClick={(e) => handleClick(e, "advertisement")}
               >
-                <CustomButton text="More detailed" variant="original" />
+                <CustomButton text={t("details")} variant="original" />
               </a>
             </div>
             <div className="about__content-cards">
               <div className="card">
-                <span className="card__text">1 Y.</span>
-                <span className="card__subtext">Expirence</span>
+                <span className="card__text">{t("exp")}</span>
+                <span className="card__subtext">{t("exp_sub")}</span>
               </div>
               <span className="line" />
               <div className="card">
-                <span className="card__text">4</span>
-                <span className="card__subtext">Pet projects</span>
+                <span className="card__text">{t("pet")}</span>
+                <span className="card__subtext">{t("pet_sub")}</span>
               </div>
               <span className="line" />
               <div className="card">
-                <span className="card__text">1</span>
-                <span className="card__subtext">Commerce project</span>
+                <span className="card__text">{t("commerce")}</span>
+                <span className="card__subtext">{t("commerce_sub")}</span>
               </div>
             </div>
           </div>

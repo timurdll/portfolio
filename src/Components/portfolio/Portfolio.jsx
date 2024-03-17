@@ -1,28 +1,49 @@
 import React from "react";
 import CustomButton from "../button/CustomButton";
 import "./portfolio.css";
+import { useTranslation } from "react-i18next";
 
 const Portfolio = () => {
+  const { t } = useTranslation();
   return (
     <section className="portfolio" id="portfolio">
       <div className="container">
         <div className="portfolio__row">
           <div className="portfolio__header">
-            <span className="portfolio__header-text">Portfolio</span>
+            <span className="portfolio__header-text">{t("portfolio")}</span>
             <span className="portfolio__header-subtext">
-              Every project is unique piece of development created with love💖
+              {t("portfolio_sub")}
             </span>
           </div>
+
           <div className="portfolio__content">
+            <div className="portfolio__card">
+              <div className="portfolio__card-image3" />
+              <div className="portfolio__card-description">
+                <span className="description-1">
+                  Next.js, tailwind, rtk-query
+                </span>
+                <span className="description-2">Tweetopia🐦</span>
+                <span className="description-3">{t("project-1")}</span>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://promptopia-omega-rouge.vercel.app/"
+                >
+                  <CustomButton
+                    iconType="purple-arrow"
+                    text={t("open")}
+                    variant="second"
+                  />
+                </a>
+              </div>
+            </div>
             <div className="portfolio__card">
               <div className="portfolio__card-image1" />
               <div className="portfolio__card-description">
                 <span className="description-1">React.js, firebase, MUI</span>
                 <span className="description-2">IT English📚</span>
-                <span className="description-3">
-                  Educational web app with vocabulary, tests and interactive
-                  tasks.
-                </span>
+                <span className="description-3">{t("project-2")}</span>
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
@@ -30,7 +51,7 @@ const Portfolio = () => {
                 >
                   <CustomButton
                     iconType="purple-arrow"
-                    text="Open"
+                    text={t("open")}
                     variant="second"
                   />
                 </a>
@@ -42,10 +63,8 @@ const Portfolio = () => {
                 <span className="description-1">
                   Next.js, tailwind, typescript
                 </span>
-                <span className="description-2">Wheelssync🚗</span>
-                <span className="description-3">
-                  A car rental website with detailed car data and filter-search.
-                </span>
+                <span className="description-2">CarHub🚗</span>
+                <span className="description-3">{t("project-3")}</span>
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
@@ -53,42 +72,19 @@ const Portfolio = () => {
                 >
                   <CustomButton
                     iconType="purple-arrow"
-                    text="Open"
+                    text={t("open")}
                     variant="second"
                   />
                 </a>
               </div>
             </div>
-            <div className="portfolio__card">
-              <div className="portfolio__card-image3" />
-              <div className="portfolio__card-description">
-                <span className="description-1">Next.js, tailwind</span>
-                <span className="description-2">Promptopia🤖</span>
-                <span className="description-3">
-                  A prompt sharing website with personal profiles.
-                </span>
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://promptopia-omega-rouge.vercel.app/"
-                >
-                  <CustomButton
-                    iconType="purple-arrow"
-                    text="Open"
-                    variant="second"
-                  />
-                </a>
-              </div>
-            </div>
-            {/* <div className="portfolio__card">2</div>
-            <div className="portfolio__card">3</div> */}
           </div>
           <a
             target="_blank"
             rel="noopener noreferrer"
             href="https://github.com/timurdll"
           >
-            <CustomButton text="More Projects" variant="original" />
+            <CustomButton text={t("more")} variant="original" />
           </a>
         </div>
       </div>
