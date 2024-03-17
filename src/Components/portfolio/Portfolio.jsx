@@ -28,7 +28,7 @@ const Portfolio = () => {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://promptopia-omega-rouge.vercel.app/"
+                  href="https://tweetopia-eight.vercel.app/"
                 >
                   <CustomButton
                     iconType="purple-arrow"

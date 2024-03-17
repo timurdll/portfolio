@@ -2,6 +2,7 @@ import React from "react";
 import "./about.css";
 import CustomButton from "../button/CustomButton";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 const About = () => {
   const { t } = useTranslation();
@@ -21,23 +22,64 @@ const About = () => {
         <div className="about__row">
           <div className="about__content">
             <div className="about__content-text">
-              <span className="hello">
+              <motion.span
+                initial={{ x: -100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{
+                  duration: 0.7,
+                }}
+                className="hello"
+              >
                 {t("hello")}
                 <br />
-                {t("Timur")}
-              </span>
-              <span className="info">
+                {t("Timur")}👋
+                {/* <motion.div
+                  animate={{ rotate: 5 }}
+                  transition={{
+                    repeat: Infinity,
+                    duration: 1,
+                    repeatType: "mirror",
+                  }}
+                  // style={{ maxWidth: "30px" }}
+                >
+                  👋
+                </motion.div> */}
+              </motion.span>
+
+              <motion.span
+                initial={{ x: -100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{
+                  duration: 1.5,
+                  delay: 0.8,
+                }}
+                className="info"
+              >
                 {t("about_me-1")}
                 <br /> {t("about_me-2")}
-              </span>
-              <a
+              </motion.span>
+              <motion.a
                 href="#advertisement"
+                initial={{ x: -100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{
+                  duration: 1.5,
+                  delay: 1.5,
+                }}
                 onClick={(e) => handleClick(e, "advertisement")}
               >
                 <CustomButton text={t("details")} variant="original" />
-              </a>
+              </motion.a>
             </div>
-            <div className="about__content-cards">
+            <motion.div
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{
+                duration: 1.5,
+                delay: 1.8,
+              }}
+              className="about__content-cards"
+            >
               <div className="card">
                 <span className="card__text">{t("exp")}</span>
                 <span className="card__subtext">{t("exp_sub")}</span>
@@ -52,7 +94,7 @@ const About = () => {
                 <span className="card__text">{t("commerce")}</span>
                 <span className="card__subtext">{t("commerce_sub")}</span>
               </div>
-            </div>
+            </motion.div>
           </div>
           <div className="about__image"></div>
         </div>

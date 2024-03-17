@@ -4,6 +4,14 @@ import "./advertisement.css";
 
 const Advertisement = () => {
   const { t } = useTranslation();
+  const handleDownloadClick = () => {
+    const link = document.createElement("a");
+    link.href = "/Alshynbaev Timur Beibitovich.pdf";
+    link.setAttribute("download", "TimurAlshynbayev.pdf");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <section className="advertisement" id="advertisement">
       <div className="container">
@@ -36,6 +44,7 @@ const Advertisement = () => {
             text={t("download")}
             iconType="download"
             variant="original"
+            onClick={handleDownloadClick}
           />
         </div>
       </div>
